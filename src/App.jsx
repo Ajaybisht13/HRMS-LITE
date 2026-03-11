@@ -5,23 +5,14 @@ import Navbar from "./components/Navbar"
 import "./App.css"
 
 function App() {
-
   return (
-
-    <BrowserRouter>
-
+    <BrowserRouter basename="/HRMS-LITE">
       <Navbar />
-
       <Routes>
-
         <Route path="/" element={<Employees />} />
-
         <Route path="/attendance" element={<Attendance />} />
-
       </Routes>
-
     </BrowserRouter>
-
   )
 }
 

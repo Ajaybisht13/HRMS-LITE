@@ -1,5 +1,5 @@
 const config = {
-  API_URL: "http://localhost:8000/api/",
+  API_URL: "https://hrms-lite-backend-rjyw.onrender.com/docs",
 };
 
 export default config;
