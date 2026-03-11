@@ -1,0 +1,25 @@
+name: Deploy React App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger only when pushing to 'main' branch
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-react-to-gh-pages:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 🧩 Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # ⚡ Step 2: Deploy the pre-built React app
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Make sure this folder exists in your repo
