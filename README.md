@@ -17,7 +17,7 @@ https://ajaybisht13.github.io/HRMS-LITE/
 
 Backend API
 
-https://hrms-lite-backend-rjw.onrender.com
+https://hrms-lite-backend-rjyw.onrender.com/api/
 
 ---
 
