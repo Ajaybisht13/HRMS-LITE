@@ -12,7 +12,6 @@ function Attendance() {
 
     const [emp, setEmp] = useState("")
     const [records, setRecords] = useState([])
-    const [loading, setLoading] = useState(false)
 
     const submit = async (e) => {
 
@@ -23,10 +22,7 @@ function Attendance() {
             return
         }
 
-        setLoading(true)
-
         await addAttendanceData(form).then((response) => {
-            setLoading(false)
             if (response?.succeeded) {
                 alert(response?.message)
                 setForm({
@@ -49,12 +45,9 @@ function Attendance() {
         let payload = {
             employee_id: emp
         }
-        setLoading(true)
-
         await getAttendanceData(payload).then((response) => {
             if (response?.succeeded) {
                 setRecords(response?.data || [])
-                setLoading(false)
             }
         })
     }
