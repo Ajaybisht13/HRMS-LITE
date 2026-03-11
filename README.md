@@ -1,16 +1,181 @@
-# React + Vite
+# HRMS Lite – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is the frontend application for **HRMS Lite**, a lightweight Human Resource Management System.
+The frontend provides an interface for managing employee records and tracking employee attendance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It communicates with the backend REST API built using **FastAPI**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Live Application
 
-## Expanding the ESLint configuration
+Frontend (GitHub Pages)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+https://ajaybisht13.github.io/HRMS-LITE/
+
+Backend API
+
+https://hrms-lite-backend-rjw.onrender.com
+
+---
+
+# Tech Stack
+
+* React
+* React Router
+* Axios
+* Vite
+* CSS
+
+---
+
+# Features
+
+## Employee Management
+
+The admin can:
+
+* Add new employees
+* View list of employees
+* Delete employees
+
+Employee fields:
+
+* Employee ID
+* Full Name
+* Email
+* Department
+
+---
+
+## Attendance Management
+
+The admin can:
+
+* Mark attendance for employees
+* View attendance records by employee
+* Prevent duplicate attendance entries for the same date
+
+Attendance fields:
+
+* Employee ID
+* Date
+* Status (Present / Absent)
+
+---
+
+# Project Structure
+
+```
+src
+│
+├── components
+│   └── Navbar.jsx
+│
+├── pages
+│   ├── Employees.jsx
+│   └── Attendance.jsx
+│
+├── helpers
+│   └── Services
+│       └── employeeList.js
+│
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+
+---
+
+# Running the Project Locally
+
+## 1. Clone the repository
+
+```
+git clone https://github.com/Ajaybisht13/HRMS-LITE.git
+```
+
+Navigate to frontend folder
+
+```
+cd HRMS-LITE/frontend
+```
+
+---
+
+## 2. Install dependencies
+
+```
+npm install
+```
+
+---
+
+## 3. Start development server
+
+```
+npm run dev
+```
+
+Frontend will run at
+
+```
+http://localhost:5173
+```
+
+---
+
+# API Configuration
+
+The frontend communicates with the backend using REST APIs.
+
+Example API endpoint:
+
+```
+GET /api/employees
+POST /api/employees
+POST /api/add_attendance
+```
+
+Production API base URL:
+
+```
+https://hrms-lite-backend-rjw.onrender.com/api
+```
+
+---
+
+# Deployment
+
+The frontend is deployed using **GitHub Pages**.
+
+Deployment command:
+
+```
+npm run build
+```
+
+Then the build files are deployed to GitHub Pages.
+
+Live URL
+
+```
+https://ajaybisht13.github.io/HRMS-LITE/
+```
+
+---
+
+# Limitations
+
+* No authentication implemented
+* No employee edit functionality
+* No pagination for employee list
+* Basic UI without advanced analytics
+
+---
+
+# Author
+
+Ajay Bisht
