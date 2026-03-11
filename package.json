@@ -8,8 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "postbuild": "cp dist/index.html dist/404.html"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^1.13.6",
